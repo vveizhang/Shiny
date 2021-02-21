@@ -6,7 +6,7 @@ MAD <- read.csv('MEageMedianMAD.csv')
 
 colours <-  c('#FF0000',"#CC00CC","#CC6600","#9933FF",'#00CCCC',"#0000CC")
 
-function(input, output) {
+server <- function(input, output) {
   output$plot1 <- renderPlot({MAD %>% 
     ggplot() + 
       geom_line(aes(MAD[,5], MAD[,as.integer(input$var) + 5]), group = 1,color = sample(colours,1), size = 1) +
