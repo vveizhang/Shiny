@@ -1,7 +1,7 @@
 library(shiny)
 library(ggplot2)
 
-shinyUI(fluidPage(
+fluidPage(
   titlePanel("censusVis"),
   
   sidebarLayout(
@@ -18,4 +18,4 @@ shinyUI(fluidPage(
       plotOutput("plot1")
     )
   )
-))
+)
